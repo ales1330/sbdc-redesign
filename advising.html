@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request advising | Small Business Development Center (redesign demo)</title>
+  <meta name="description" content="Student redesign of an advising request form with labels, required fields and built-in validation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <p class="demo-banner">Student redesign demo for ATLS/CSCI 3150. This is not the official site. Menu items I did not rebuild go to the <a href="https://sbdc.colorado.gov/">original site</a>.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="logo.svg" alt=""><span>Small Business Development Center<small>Colorado SBDC</small></span></a>
+      <nav class="main-nav" aria-label="Main"><ul class="menu"><li><a href="index.html">Home</a></li><li><a href="advising.html" aria-current="page">No-Cost Advising</a></li><li><button type="button" class="toggle" aria-expanded="false" aria-controls="sm-programs">Programs &amp; Events<span class="visually-hidden"> submenu</span></button><ul class="submenu" id="sm-programs" hidden><li><a href="https://sbdc.colorado.gov/">Calendar</a></li><li><a href="https://sbdc.colorado.gov/">Business Recovery &amp; Resiliency Guide</a></li><li><a href="https://sbdc.colorado.gov/">Child Care</a></li><li><a href="https://sbdc.colorado.gov/">Funding Readiness</a></li><li><a href="https://sbdc.colorado.gov/">Leading Edge for Startups</a></li><li><a href="https://sbdc.colorado.gov/">TechSource</a></li></ul></li><li><a href="https://sbdc.colorado.gov/">Client Stories</a></li><li><button type="button" class="toggle" aria-expanded="false" aria-controls="sm-centers">Center Locations<span class="visually-hidden"> submenu</span></button><ul class="submenu" id="sm-centers" hidden><li><a href="boulder.html">Boulder</a></li><li><a href="https://sbdc.colorado.gov/">Other Colorado centers (original site)</a></li></ul></li><li><button type="button" class="toggle" aria-expanded="false" aria-controls="sm-about">About Us<span class="visually-hidden"> submenu</span></button><ul class="submenu" id="sm-about" hidden><li><a href="https://sbdc.colorado.gov/">Our Impact</a></li><li><a href="boulder.html#team">Our Team</a></li><li><a href="https://sbdc.colorado.gov/">Accessibility Statement</a></li><li><a href="https://sbdc.colorado.gov/">Federal Funding Disclosure</a></li></ul></li></ul></nav>
+    </div>
+  </header>
+  <main id="main-content" class="wrap" tabindex="-1">
+    <h1>Request a no-cost advising session</h1>
+    <p>Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required. An advisor will reply by email.</p>
+    <div id="form-status" role="status" tabindex="-1"></div>
+    <form class="contact" id="advising-form" action="#" method="post" novalidate>
+      <div class="field"><label for="name">Your full name <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" required><p class="error-msg">Enter your name.</p></div>
+      <div class="field"><label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required><p class="error-msg">Enter an email address like name@example.com.</p></div>
+      <div class="field"><label for="phone">Phone number (optional)</label>
+        <span class="hint" id="phone-hint">Include the area code, for example 303-555-0100.</span>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" data-base="phone-hint" aria-describedby="phone-hint" pattern="[0-9()+ .\-]{7,}"><p class="error-msg">Enter a phone number with at least 7 digits, or leave this blank.</p></div>
+      <div class="field"><label for="biz">Business name (optional)</label>
+        <input type="text" id="biz" name="biz" autocomplete="organization"></div>
+      <div class="field"><label for="stage">Where is your business right now? <span class="req" aria-hidden="true">*</span></label>
+        <select id="stage" name="stage" required><option value="">Choose one</option><option>I have an idea</option><option>I am starting up</option><option>I am operating</option><option>I am growing</option><option>I am planning to sell or exit</option></select>
+        <p class="error-msg">Choose where your business is right now.</p></div>
+      <div class="field"><label for="help">How can we help? <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="help" name="help" rows="6" required minlength="10"></textarea><p class="error-msg">Write at least 10 characters.</p></div>
+      <div class="field check"><label for="elig"><input type="checkbox" id="elig" name="elig" required><span>I understand services are for small businesses that are eligible for federally funded services. <span class="req" aria-hidden="true">*</span></span></label>
+        <p class="error-msg">Check this box to continue.</p></div>
+      <button type="submit">Send request</button>
+    </form>
+    <p>This is a demo form. It checks your answers in the browser but does not send anything.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <h2 class="visually-hidden">Site information</h2>
+      <nav aria-label="Footer"><ul>
+        <li><a href="advising.html">No-Cost Advising</a></li>
+        <li><a href="boulder.html">Boulder center</a></li>
+        <li><a href="https://sbdc.colorado.gov/">Statewide programs</a></li>
+        <li><a href="https://sbdc.colorado.gov/">State of Colorado accessibility statement</a></li>
+      </ul></nav>
+      <p>Follow the Colorado SBDC: <a href="https://www.facebook.com/">Colorado SBDC on Facebook</a>, <a href="https://www.linkedin.com/">Colorado SBDC on LinkedIn</a>, <a href="https://www.instagram.com/">Colorado SBDC on Instagram</a></p>
+      <p>Connect: 1600 Broadway, Ste. 2500, Denver, CO 80202. Phone <a href="tel:+13038605881">(303) 860-5881</a>. Email <a href="mailto:sbdc@state.co.us">sbdc@state.co.us</a>.</p>
+      <p>Last updated: <time datetime="2026-11-13">November 13, 2026</time>. Content based on the Colorado SBDC site. &copy; State of Colorado.</p>
+    </div>
+  </footer>
+  <script>
+  (function () {
+    var toggles = document.querySelectorAll('.menu .toggle');
+    function closeAll(except) {
+      toggles.forEach(function (t) {
+        if (t !== except) { t.setAttribute('aria-expanded', 'false'); document.getElementById(t.getAttribute('aria-controls')).hidden = true; }
+      });
+    }
+    toggles.forEach(function (t) {
+      t.addEventListener('click', function () {
+        var open = t.getAttribute('aria-expanded') === 'true';
+        closeAll(t);
+        t.setAttribute('aria-expanded', open ? 'false' : 'true');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = open;
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        var openT = document.querySelector('.menu .toggle[aria-expanded="true"]');
+        if (openT) { closeAll(null); openT.focus(); }
+      }
+    });
+    document.addEventListener('click', function (e) { if (!e.target.closest('.menu')) closeAll(null); });
+  })();
+  </script>
+  <script>
+  (function () {
+    var form = document.getElementById('advising-form');
+    var status = document.getElementById('form-status');
+    var fields = form.querySelectorAll('input:not([type=checkbox]), select, textarea, input[type=checkbox]');
+    function check(el) {
+      var wrap = el.closest('.field');
+      var ok = el.checkValidity();
+      wrap.classList.toggle('invalid', !ok);
+      el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+      var err = wrap.querySelector('.error-msg');
+      if (err && !err.id) err.id = el.id + '-err';
+      var base = el.getAttribute('data-base') || '';
+      var desc = ok || !err ? base : (base + ' ' + err.id).trim();
+      if (desc) el.setAttribute('aria-describedby', desc); else el.removeAttribute('aria-describedby');
+      return ok;
+    }
+    fields.forEach(function (el) {
+      el.addEventListener('blur', function () { if (!el.checkValidity()) check(el); });
+      var again = function () { if (el.closest('.field').classList.contains('invalid')) check(el); };
+      el.addEventListener('input', again); el.addEventListener('change', again);
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var firstBad = null;
+      fields.forEach(function (el) { if (!check(el) && !firstBad) firstBad = el; });
+      status.classList.add('show');
+      if (firstBad) {
+        var n = form.querySelectorAll('.field.invalid').length;
+        status.style.borderLeftColor = '#9b1c1c'; status.style.background = '#fdeeee';
+        status.textContent = n + (n === 1 ? ' field needs' : ' fields need') + ' fixing before you can send. The first one is below.';
+        firstBad.focus();
+      } else {
+        status.style.borderLeftColor = ''; status.style.background = '';
+        status.textContent = 'Thanks. In the real site your request would be sent now.';
+        form.reset(); status.focus();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
