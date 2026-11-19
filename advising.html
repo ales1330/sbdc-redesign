@@ -52,7 +52,7 @@
         <li><a href="https://sbdc.colorado.gov/">State of Colorado accessibility statement</a></li>
       </ul></nav>
       <p>Follow the Colorado SBDC: <a href="https://www.facebook.com/">Colorado SBDC on Facebook</a>, <a href="https://www.linkedin.com/">Colorado SBDC on LinkedIn</a>, <a href="https://www.instagram.com/">Colorado SBDC on Instagram</a></p>
-      <p>Connect: 1600 Broadway, Ste. 2500, Denver, CO 80202. Phone <a href="tel:+13038605881">(303) 860-5881</a>. Email <a href="mailto:sbdc@state.co.us">sbdc@state.co.us</a>.</p>
+      <p>Colorado SBDC state office (not the Boulder center): 1600 Broadway, Ste. 2500, Denver, CO 80202. Phone <a href="tel:+13038605881">(303) 860-5881</a>. Email <a href="mailto:sbdc@state.co.us">sbdc@state.co.us</a>.</p>
       <p>Last updated: <time datetime="2026-11-13">November 13, 2026</time>. Content based on the Colorado SBDC site. &copy; State of Colorado.</p>
     </div>
   </footer>
@@ -110,11 +110,11 @@
       status.classList.add('show');
       if (firstBad) {
         var n = form.querySelectorAll('.field.invalid').length;
-        status.style.borderLeftColor = '#9b1c1c'; status.style.background = '#fdeeee';
+        status.classList.add('is-error');
         status.textContent = n + (n === 1 ? ' field needs' : ' fields need') + ' fixing before you can send. The first one is below.';
         firstBad.focus();
       } else {
-        status.style.borderLeftColor = ''; status.style.background = '';
+        status.classList.remove('is-error');
         status.textContent = 'Thanks. In the real site your request would be sent now.';
         form.reset(); status.focus();
       }
