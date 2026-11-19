@@ -108,7 +108,7 @@ form.contact { max-width: 36rem; }
 .site-footer a { color: #fff; }
 .site-footer a:focus-visible { outline-color: #ffd28a; }
 .site-footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; padding: 0; margin: 0 0 0.75rem; }
-.demo-banner { background: #222; color: #fff; text-align: center; padding: 0.4rem 1rem; font-size: 0.9rem; }
+.demo-banner { margin: 0; background: #222; color: #fff; text-align: center; padding: 0.4rem 1rem; font-size: 0.9rem; }
 .demo-banner a { color: #ffd28a; }
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
@@ -149,3 +149,5 @@ form.contact { max-width: 36rem; }
 .field.check input { width: auto; margin-top: 0.3rem; }
 address { font-style: normal; }
 @media (max-width: 40rem) { .menu .submenu { position: static; border-width: 0 0 0 4px; } }
+.breadcrumb { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0 0 1rem; }
+#form-status.is-error { border-left-color: #9b1c1c; background: #fdeeee; }
